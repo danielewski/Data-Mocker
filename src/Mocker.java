@@ -162,7 +162,7 @@ public class Mocker {
 	// creates companyNum different companies and adds them to a file
 	public static void companyCreate(int companyNum) throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\companyData.csv"));
+				new FileWriter("companyData.csv"));
 		HashMap<Boolean, String> phoneMap = new HashMap<Boolean, String>();
 
 		for (int i = 0; i < companyNum; i++) {
@@ -193,7 +193,7 @@ public class Mocker {
 
 	public static void employeeCreate(int employeeNum) throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\employeeData.csv"));
+				new FileWriter("employeeData.csv"));
 		HashMap<Boolean, String> ssnMap = new HashMap<Boolean, String>();
 
 		for (int i = 0; i < employeeNum; i++) {
@@ -227,7 +227,7 @@ public class Mocker {
 
 	public static void industryCreate(int industryNum) throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\industryData.csv"));
+				new FileWriter("industryData.csv"));
 		HashMap<Boolean, String> sectorIDMap = new HashMap<Boolean, String>();
 
 		for (int i = 0; i < industryNum; i++) {
@@ -258,7 +258,7 @@ public class Mocker {
 
 	public static void locationCreate(int locationNum) throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\locationData.csv"));
+				new FileWriter("locationData.csv"));
 		HashMap<Boolean, String> sectorIDMap = new HashMap<Boolean, String>();
 
 		for (int i = 0; i < locationNum; i++) {
@@ -288,7 +288,7 @@ public class Mocker {
 
 	public static void productCreate(int productNum) throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\productData.csv"));
+				new FileWriter("productData.csv"));
 		HashMap<Boolean, String> productIDMap = new HashMap<Boolean, String>();
 		for (int i = 0; i < productNum; i++) {
 
@@ -318,7 +318,7 @@ public class Mocker {
 	// company and industry relation
 	public static void belongsToCreate() throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\belongsToData.csv"));
+				new FileWriter("belongsToData.csv"));
 		for (int i = 0; i < companiesKey.length; i++) {
 			// industries dont need to be double checked, many companies can be in the same
 			// industry
@@ -334,7 +334,7 @@ public class Mocker {
 	// company and employees relation
 	public static void hiresCreate() throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\hiresData.csv"));
+				new FileWriter("hiresData.csv"));
 		for (int i = 0; i < employeesKey.length; i++) {
 			// companies dont need to be unique, many employees can be in the same company
 			int randCompany = (int) (Math.random() * companiesKey.length);
@@ -348,7 +348,7 @@ public class Mocker {
 	// company and location relation
 	public static void residesInCreate() throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\residesInData.csv"));
+				new FileWriter("residesInData.csv"));
 		for (int i = 0; i < companiesKey.length; i++) {
 			// locations dont need to be unique, many companies can be in the same location
 			int randLocation = (int) (Math.random() * locationsKey.length);
@@ -363,7 +363,7 @@ public class Mocker {
 	// company and product relation
 	public static void sellsCreate() throws IOException {
 		BufferedWriter writer = new BufferedWriter(
-				new FileWriter("C:\\Users\\Taylor Danielewski\\Desktop\\data\\sellsData.csv"));
+				new FileWriter("sellsData.csv"));
 		for (int i = 0; i < productsKey.length; i++) {
 			// companies dont need to be unique, many products can be sold by the same
 			// company
